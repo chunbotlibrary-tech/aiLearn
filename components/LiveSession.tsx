@@ -68,9 +68,14 @@ const LiveSession: React.FC<LiveSessionProps> = ({ level, topic, onEndSession })
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       setMicStream(stream);
 
-      // 3. Initialize Gemini
-      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-      if (!apiKey) throw new Error("API Key not found");
+
+      const apiKey = "AIzaSyCzui7bn0ooJTk2ePJdb8AQmiyCS9CWo2A";
+      // ឧទាហរណ៍: const apiKey = "AIzaSyD1234567890abcdefghijklmnop";
+      
+      if (!apiKey || apiKey === "ដាក់_API_KEY_របស់លោកគ្រូត្រង់នេះ") {
+        throw new Error("សូមដាក់ Gemini API Key របស់លោកគ្រូត្រង់បន្ទាត់ទី 73");
+      }
+      
       const ai = new GoogleGenAI({ apiKey });
 
       // 4. Connect Live Session
