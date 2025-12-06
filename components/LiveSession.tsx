@@ -69,7 +69,7 @@ const LiveSession: React.FC<LiveSessionProps> = ({ level, topic, onEndSession })
       setMicStream(stream);
 
       // 3. Initialize Gemini
-      const apiKey = process.env.API_KEY;
+      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
       if (!apiKey) throw new Error("API Key not found");
       const ai = new GoogleGenAI({ apiKey });
 
