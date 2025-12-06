@@ -1,0 +1,7 @@
+{
+  "name": "SpeakFluent KH",
+  "description": "An AI-powered English tutoring application designed for Khmer speakers to master English from beginner to advanced levels using real-time voice interaction.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
